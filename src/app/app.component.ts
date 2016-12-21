@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { TabsPage } from '../pages/tabs/tabs';
-import { LoginComponent } from '../pages/auth/login';
+// import { LoginComponent } from '../pages/auth/login';
 
 declare let Meteor;
 
@@ -10,10 +10,10 @@ declare let Meteor;
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage: any;
+  rootPage: TabsPage;
 
   constructor(platform: Platform) {
-    this.rootPage = Meteor.user() ? TabsPage : LoginComponent;
+    // this.rootPage = Meteor.user() ? TabsPage : LoginComponent;
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
